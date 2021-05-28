@@ -20,3 +20,7 @@ Para realizar ese estudio partimos de los datos que nos entrega la propia empres
 Partimos de una una serie de mediciones de convo
 
 sumo de diferentes vehículos de la flota.
+
+# Cálculo ruta
+
+https://github.com/kovacsbalu
