@@ -1,10 +1,12 @@
 from flask import Flask, request 
 import markdown.extensions.fenced_code
 from src.ruta import estimador_ruta as ruta
-import basedatos as db
+import src.basedatos as db  
 import pandas as pd
 import config.config as conf
 from src.predecir import estimacion
+
+
 
 print(" - - - Iniziando API")
 app = Flask(__name__)
@@ -50,12 +52,6 @@ def calculator():
 #////////////////////////////////    POST    /////////////////////////////////////////////////////
 @app.route("/drop", methods=["POST"])
 def eliminar():
-    """Drops all the schems and tables in db
-
-    Returns:
-        str: Load done or error
-    """
- 
     return db.eliminar()
 
 
@@ -63,8 +59,10 @@ def eliminar():
 def carga():
     return db.carga_df_local()
 
-@app.route("/creadb", methods=["POST"])
-def creabase():
+@app.route("/crea", methods=["POST"])
+def crea_tablas():
     return db.crea()
 
-app.run("localhost", 5001, debug=True)
+app.run("localhost", 5002, debug=True)
+
+

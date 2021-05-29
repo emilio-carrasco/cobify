@@ -26,13 +26,15 @@ dotenv.load_dotenv()
 passw = os.getenv("pass_sql")
 dbName= os.getenv("db")
 
-tabla1 = os.getenv("tabla")
+tabla = os.getenv("tabla")
 api_id_here = os.getenv("api_id_here")
 api_code_here= os.getenv("api_code_here")
 
 #CONECTO CON LA BASE DE DATOS
 os.system("sudo /etc/init.d/mysql start")
 conexion=f"mysql+pymysql://root:{passw}@localhost/{dbName}"
+
+print("conexion:", conexion)
 engine = alch.create_engine(conexion)
 
 dict_fuel = opciones['combustible']
