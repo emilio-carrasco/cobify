@@ -1,0 +1,4 @@
+{
+    "combustible": {"E10":0, "SP98":1},
+    "precio_litro" : {"E10":1.38, "SP98":1.46}
+}
